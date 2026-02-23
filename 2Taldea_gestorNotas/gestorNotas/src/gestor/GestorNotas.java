@@ -11,8 +11,12 @@ public class GestorNotas {
     }
 
     public void agregarNota(double nota) {
-        notas[contador] = nota;
-        contador++;
+    	if (contador < notas.length) {
+    		notas[contador] = nota;
+    	    contador++;
+    	} else {
+    	    System.out.println("Ez dago nota gehiago sartzeko espaziorik");
+    	}
     }
 
     public double calcularPromedio() {
@@ -34,9 +38,10 @@ public class GestorNotas {
     }
 
     public void eliminarUltimaNota() {
-        if (contador > 0) {
-            contador--;
-        }
+    	if (contador > 0) {
+    	    contador--;
+    	    notas[contador] = 0;
+    	}
     }
 
     public void mostrarNotas() {
