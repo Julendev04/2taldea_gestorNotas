@@ -27,7 +27,11 @@ public class Principal {
             if (opcion == 1) {
                 System.out.print("Introduce la nota: ");
                 double nota = sc.nextDouble();
-                gestor.agregarNota(nota);
+                if (nota >= 0 && nota <= 10) {
+                	gestor.agregarNota(nota);
+                } else {
+                	System.out.println("Nota invalida. Debe estar entre 0 y 10.");
+                }
             } else if (opcion == 2) {
                 System.out.println("Promedio: " + gestor.calcularPromedio());
             } else if (opcion == 3) {
