@@ -16,11 +16,13 @@ public class GestorNotas {
     }
 
     public double calcularPromedio() {
-        double suma = 0;
-        for (int i = 0; i < notas.length; i++) {
-            suma += notas[i];
+        if (contador==0) return 0;
+        
+        double suma =0;
+        for (int i=0; i<contador; i++) {
+        	suma+=notas [i];
         }
-        return suma / notas.length;
+        return suma/contador;
     }
 
     public double obtenerNotaMaxima() {
