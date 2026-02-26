@@ -25,6 +25,10 @@ public class GestorNotas {
 
     public double obtenerNotaMaxima() {
         double max = notas[0];
+        if(contador==0) {
+        	return 0;
+        }
+         max=notas[0];
         for (int i = 1; i < contador; i++) {
             if (notas[i] > max) {
                 max = notas[i];
